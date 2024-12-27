@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply rounded-full
+    border border-stone-200 px-4 py-2
+    text-sm transition-all duration-300
+    placeholder:text-stone-400 focus:outline-none 
+    focus:ring focus:ring-gray-300
+    md:px-6 md:py-3 md:text-base;
+  }
+  .link {
+    @apply text-sm text-blue-500 hover:text-blue-600 hover:underline;
+  }
+
+  .page {
+    @apply min-h-screen bg-gradient-to-b from-[rgba(36,42,46,0.8)] to-[rgba(36,42,46,0.8)] bg-cover bg-center;
+  }
+
+  .form {
+    @apply mx-auto my-8
+    w-full rounded-lg bg-gray-500 bg-opacity-90
+    p-4 shadow-lg
+    md:my-16 md:w-1/2 md:p-6;
+  }
+  /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+  .loader {
+    width: 45px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(theme(colors.stone.800) 0 0);
+    background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+    background-size: 20% 50%;
+    animation: loading 1s infinite linear;
+  }
+
+  .font-ZCOOL-Q {
+    font-family: 'ZCOOL QingKe HuangYou', serif;
+  }
+
+  .font-ZCOOL-Z {
+    font-family: 'ZCOOL KuaiLe', cursive;
+  }
+
+  @keyframes loading {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }
+}
+
+.map-container {
+  height: 400px;
+  width: 100%;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.zcool-qingke-huangyou-regular {
+  font-family: 'ZCOOL QingKe HuangYou', serif;
+}
