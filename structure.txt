@@ -1,0 +1,127 @@
+.
+├── LICENSE
+├── README.md
+├── als_model
+│   ├── itemFactors
+│   │   ├── _SUCCESS
+│   │   ├── part-00000-c128fed7-55c8-4cac-a4c9-a17f2372758a-c000.snappy.parquet
+│   │   ├── part-00001-c128fed7-55c8-4cac-a4c9-a17f2372758a-c000.snappy.parquet
+│   │   ├── part-00002-c128fed7-55c8-4cac-a4c9-a17f2372758a-c000.snappy.parquet
+│   │   ├── part-00003-c128fed7-55c8-4cac-a4c9-a17f2372758a-c000.snappy.parquet
+│   │   ├── part-00004-c128fed7-55c8-4cac-a4c9-a17f2372758a-c000.snappy.parquet
+│   │   ├── part-00005-c128fed7-55c8-4cac-a4c9-a17f2372758a-c000.snappy.parquet
+│   │   ├── part-00006-c128fed7-55c8-4cac-a4c9-a17f2372758a-c000.snappy.parquet
+│   │   ├── part-00007-c128fed7-55c8-4cac-a4c9-a17f2372758a-c000.snappy.parquet
+│   │   ├── part-00008-c128fed7-55c8-4cac-a4c9-a17f2372758a-c000.snappy.parquet
+│   │   └── part-00009-c128fed7-55c8-4cac-a4c9-a17f2372758a-c000.snappy.parquet
+│   ├── metadata
+│   │   ├── _SUCCESS
+│   │   └── part-00000
+│   └── userFactors
+│       ├── _SUCCESS
+│       ├── part-00000-ce7f3b25-49f8-4bb2-bf50-aaad4269c9e2-c000.snappy.parquet
+│       ├── part-00001-ce7f3b25-49f8-4bb2-bf50-aaad4269c9e2-c000.snappy.parquet
+│       ├── part-00002-ce7f3b25-49f8-4bb2-bf50-aaad4269c9e2-c000.snappy.parquet
+│       ├── part-00003-ce7f3b25-49f8-4bb2-bf50-aaad4269c9e2-c000.snappy.parquet
+│       ├── part-00004-ce7f3b25-49f8-4bb2-bf50-aaad4269c9e2-c000.snappy.parquet
+│       ├── part-00005-ce7f3b25-49f8-4bb2-bf50-aaad4269c9e2-c000.snappy.parquet
+│       ├── part-00006-ce7f3b25-49f8-4bb2-bf50-aaad4269c9e2-c000.snappy.parquet
+│       ├── part-00007-ce7f3b25-49f8-4bb2-bf50-aaad4269c9e2-c000.snappy.parquet
+│       ├── part-00008-ce7f3b25-49f8-4bb2-bf50-aaad4269c9e2-c000.snappy.parquet
+│       └── part-00009-ce7f3b25-49f8-4bb2-bf50-aaad4269c9e2-c000.snappy.parquet
+├── backend
+│   ├── ModelServer.py
+│   ├── app.js
+│   ├── config.env
+│   ├── controllers
+│   │   ├── authController.js
+│   │   ├── errorController.js
+│   │   ├── movieControllers.js
+│   │   └── userControllers.js
+│   ├── data
+│   │   ├── cleaned_movies.json
+│   │   ├── import-dev-data.js
+│   │   ├── movies_metadata.json
+│   │   ├── testData.json
+│   │   └── washer.py
+│   ├── models
+│   │   ├── movieModels.js
+│   │   └── userModels.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── requirements.txt
+│   ├── routes
+│   │   ├── movieRoutes.js
+│   │   └── userRoutes.js
+│   ├── server.js
+│   └── utils
+│       ├── apiFeatures.js
+│       ├── appError.js
+│       ├── catchAsync.js
+│       └── email.js
+├── frontend
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public
+│   │   ├── favicon.ico
+│   │   ├── popcorn.png
+│   │   └── vite.svg
+│   ├── src
+│   │   ├── App.jsx
+│   │   ├── components
+│   │   │   ├── Button.jsx
+│   │   │   ├── DashboardBody.jsx
+│   │   │   ├── DashboardFooter.jsx
+│   │   │   ├── DashboardHeader.jsx
+│   │   │   ├── DashboardRating.jsx
+│   │   │   ├── LinkBtn.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   ├── Logo.jsx
+│   │   │   ├── PageNav.jsx
+│   │   │   └── Spinner
+│   │   │       ├── Spinner.jsx
+│   │   │       └── Spinner.module.css
+│   │   ├── context
+│   │   │   ├── authContext.jsx
+│   │   │   └── moviesContext.jsx
+│   │   ├── features
+│   │   │   ├── App
+│   │   │   │   ├── AppNav.jsx
+│   │   │   │   ├── Applayout.jsx
+│   │   │   │   ├── Dashboard.jsx
+│   │   │   │   ├── MovieItem.jsx
+│   │   │   │   ├── MoviesLibrary.jsx
+│   │   │   │   ├── MoviesRecommender.jsx
+│   │   │   │   └── Sidebar.jsx
+│   │   │   ├── Auth
+│   │   │   │   ├── ChangePassword.jsx
+│   │   │   │   ├── Login.jsx
+│   │   │   │   └── Signup.jsx
+│   │   │   └── User
+│   │   │       ├── UserInfo.jsx
+│   │   │       ├── UserTag.jsx
+│   │   │       └── WatchedMovies.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   │   ├── ui
+│   │   │   ├── Error.jsx
+│   │   │   ├── HomePage.jsx
+│   │   │   ├── More.jsx
+│   │   │   └── PageNotFound.jsx
+│   │   └── utils
+│   │       └── useUrl.js
+│   ├── tailwind.config.js
+│   └── vite.config.js
+├── others
+│   ├── cvsTOjson.py
+│   ├── development.md
+│   ├── movie-recommender交互流程.drawio
+│   ├── rm_blank_id.py
+│   ├── script.py
+│   ├── 后端流程图.drawio
+│   └── 项目结构图.drawio
+└── structure.txt
+
+24 directories, 101 files
